@@ -3,9 +3,9 @@ const http = require("http");
 const express = require("express");
 // const socketIo = require("socket.io");
 const app = express();
-const server = http.createServer(app);
-const io = require("socket.io")(server);
-global.io = io;
+//const server = http.createServer(app);
+//const io = require("socket.io")(server);
+// global.io = io;
 const dotenv = require("dotenv");
 const mongoose = require("mongoose");
 const path = require("path");
@@ -22,7 +22,7 @@ const inboxRouter = require("./routers/inboxRouter");
 
 dotenv.config();
 
-global.io = io; // Assigning the io instance to global
+//global.io = io; // Assigning the io instance to global
 
 //?db connection
 mongoose.connect(process.env.MONGO_CONNECTION_STRING, {
